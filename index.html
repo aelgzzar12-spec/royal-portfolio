@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Royal Portfolio | Creative Portfolio</title>
+
+  <meta
+    name="description"
+    content="Royal Portfolio — a premium personal portfolio website template."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #11110f;
+      --cream: #f3eee5;
+      --paper: #faf9f6;
+      --gold: #b28b52;
+      --gray: #77736c;
+      --line: #ddd7cc;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--paper);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    .nav {
+      height: 82px;
+      padding: 0 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(250, 249, 246, 0.94);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 5px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      font-size: 13px;
+      color: #666158;
+    }
+
+    .nav-links a:hover {
+      color: var(--black);
+    }
+
+    .customize-btn {
+      padding: 10px 18px;
+      border: 1px solid var(--black);
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: calc(100vh - 82px);
+
+      padding: 8vw 7%;
+
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+
+      gap: 7vw;
+
+      align-items: center;
+
+      background: var(--cream);
+
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #777066;
+
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(65px, 8vw, 125px);
+
+      line-height: 0.92;
+
+      letter-spacing: -5px;
+
+      max-width: 850px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: #82663e;
+    }
+
+    .hero-description {
+      max-width: 520px;
+
+      margin-top: 35px;
+
+      font-size: 17px;
+
+      color: #625d55;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+
+      gap: 28px;
+
+      margin-top: 35px;
+    }
+
+    .primary-btn {
+      display: inline-block;
+
+      background: var(--black);
+      color: white;
+
+      padding: 15px 24px;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .secondary-btn {
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* HERO IMAGE */
+
+    .hero-image-area {
+      position: relative;
+
+      min-height: 590px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-image {
+      width: min(390px, 75%);
+
+      aspect-ratio: 4 / 5;
+
+      background: #d9d0c1;
+
+      overflow: hidden;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .availability {
+      position: absolute;
+
+      right: 0;
+      bottom: 14%;
+
+      z-index: 5;
+
+      background: var(--black);
+      color: white;
+
+      padding: 22px 25px;
+
+      min-width: 205px;
+    }
+
+    .availability small {
+      display: block;
+
+      color: #aaa59d;
+
+      font-size: 8px;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 6px;
+    }
+
+    .availability strong {
+      font-size: 14px;
+    }
+
+    .circle {
+      position: absolute;
+
+      left: 0;
+      top: 8%;
+
+      width: 150px;
+      height: 150px;
+
+      border: 1px solid #c3bbae;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      font-size: 9px;
+
+      letter-spacing: 2px;
+
+      color: #777066;
+
+      transform: rotate(-12deg);
+    }
+
+    /* MARQUEE */
+
+    .marquee {
+      height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 22px;
+
+      background: var(--black);
+
+      color: white;
+
+      font-size: 9px;
+
+      letter-spacing: 2px;
+
+      overflow: hidden;
+
+      white-space: nowrap;
+    }
+
+    .marquee span {
+      color: #d0cbc3;
+    }
+
+    .marquee b {
+      color: var(--gold);
+    }
+
+    /* GENERAL SECTION */
+
+    .section {
+      padding: 10vw 7%;
+    }
+
+    .section-label {
+      font-size: 10px;
+
+      letter-spacing: 3px;
+
+      color: #777066;
+
+      font-weight: bold;
+
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(50px, 6vw, 85px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+    }
+
+    /* PROJECTS */
+
+    .projects-header {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+
+      gap: 30px;
+
+      margin-bottom: 60px;
+    }
+
+    .projects {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 70px 30px;
+    }
+
+    .project:nth-child(even) {
+      margin-top: 100px;
+    }
+
+    .project-image {
+      aspect-ratio: 1.25;
+
+      background: #ddd6ca;
+
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.6s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.04);
+    }
+
+    .project-info {
+      padding-top: 18px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      border-bottom: 1px solid var(--line);
+
+      padding-bottom: 18px;
+    }
+
+    .project-info h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 28px;
+    }
+
+    .project-info span {
+      font-size: 9px;
+
+      letter-spacing: 1px;
+
+      color: #777066;
+
+      text-transform: uppercase;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--black);
+
+      color: white;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 8vw;
+    }
+
+    .about .section-label {
+      color: #aaa49c;
+    }
+
+    .about-text {
+      padding-top: 45px;
+
+      color: #c8c3bb;
+
+      font-size: 19px;
+
+      max-width: 600px;
+    }
+
+    .stats {
+      margin-top: 60px;
+
+      padding-top: 25px;
+
+      border-top: 1px solid #3c3935;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .stat strong {
+      display: block;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 40px;
+
+      color: white;
+    }
+
+    .stat span {
+      display: block;
+
+      margin-top: 3px;
+
+      font-size: 9px;
+
+      letter-spacing: 1px;
+
+      color: #99938a;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      border-top: 1px solid var(--line);
+
+      margin-top: 60px;
+    }
+
+    .service {
+      padding: 35px 25px 45px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service:not(:first-child) {
+      padding-left: 25px;
+
+      border-left: 1px solid var(--line);
+    }
+
+    .service-number {
+      color: #8b8479;
+
+      font-size: 10px;
+    }
+
+    .service h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 30px;
+
+      margin-top: 35px;
+
+      margin-bottom: 12px;
+    }
+
+    .service p {
+      color: #706b63;
+
+      font-size: 14px;
+
+      max-width: 300px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--cream);
+
+      min-height: 70vh;
+    }
+
+    .contact-title {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(65px, 9vw, 130px);
+
+      line-height: 0.9;
+
+      letter-spacing: -5px;
+
+      margin-bottom: 50px;
+    }
+
+    .contact-title em {
+      color: #82663e;
+    }
+
+    .email {
+      display: inline-block;
+
+      font-size: clamp(22px, 3vw, 40px);
+
+      border-bottom: 1px solid var(--black);
+
+      padding-bottom: 5px;
+    }
+
+    .contact-meta {
+      display: flex;
+
+      gap: 35px;
+
+      margin-top: 70px;
+
+      color: #6e685f;
+
+      font-size: 12px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--black);
+
+      color: #aaa49c;
+
+      padding: 25px 7%;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      font-size: 9px;
+
+      letter-spacing: 2px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav {
+        height: 70px;
+
+        padding: 0 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding: 14vw 6% 12vw;
+      }
+
+      .hero h1 {
+        font-size: 64px;
+
+        letter-spacing: -3px;
+      }
+
+      .hero-image-area {
+        min-height: 460px;
+      }
+
+      .hero-image {
+        width: 72%;
+      }
+
+      .circle {
+        left: 0;
+      }
+
+      .section {
+        padding: 18vw 6%;
+      }
+
+      .projects-header {
+        display: block;
+
+        margin-bottom: 45px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+      }
+
+      .project:nth-child(even) {
+        margin-top: 0;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+      }
+
+      .about-text {
+        padding-top: 0;
+      }
+
+      .stats {
+        margin-top: 45px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service:not(:first-child) {
+        padding-left: 0;
+
+        border-left: 0;
+      }
+
+      .contact-meta {
+        flex-wrap: wrap;
+
+        margin-top: 45px;
+      }
+
+      footer {
+        flex-direction: column;
+
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header class="nav">
+
+    <a href="#" class="logo">
+      ROYAL<span>.</span>
+    </a>
+
+    <nav class="nav-links">
+
+      <a href="#work">Work</a>
+
+      <a href="#about">About</a>
+
+      <a href="#services">Services</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+    <a href="customize.html" class="customize-btn">
+      Customize
+    </a>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div>
+
+      <p class="eyebrow">
+        CREATIVE PROFESSIONAL / PORTFOLIO
+      </p>
+
+      <h1>
+        Ideas that
+        <br>
+        <em>leave a mark.</em>
+      </h1>
+
+      <p class="hero-description">
+        I create thoughtful digital experiences, brands,
+        and visual work that turn ideas into memorable results.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#work" class="primary-btn">
+          Explore my work
+        </a>
+
+        <a href="#contact" class="secondary-btn">
+          Let's talk ↗
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-image-area">
+
+      <div class="hero-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85"
+          alt="Professional portrait"
+        >
+
+      </div>
+
+      <div class="circle">
+        PORTFOLIO ·
+        CREATIVE ·
+        DIGITAL ·
+      </div>
+
+      <div class="availability">
+
+        <small>
+          AVAILABLE FOR
+        </small>
+
+        <strong>
+          Selected projects
+        </strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MARQUEE -->
+
+  <div class="marquee">
+
+    <span>SELECTED WORK</span>
+
+    <b>✦</b>
+
+    <span>CREATIVE DIRECTION</span>
+
+    <b>✦</b>
+
+    <span>DIGITAL EXPERIENCES</span>
+
+    <b>✦</b>
+
+    <span>BRAND DESIGN</span>
+
+  </div>
+
+
+  <!-- WORK -->
+
+  <section class="section" id="work">
+
+    <div class="projects-header">
+
+      <div>
+
+        <p class="section-label">
+          01 / SELECTED WORK
+        </p>
+
+        <h2 class="section-title">
+          Projects<br>
+          with purpose.
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="projects">
+
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85"
+            alt="Brand identity project"
+          >
+
+        </div>
+
+        <div class="project-info">
+
+          <h3>
+            North Studio
+          </h3>
+
+          <span>
+            01 / Brand Identity
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=85"
+            alt="Digital experience project"
+          >
+
+        </div>
+
+        <div class="project-info">
+
+          <h3>
+            Maison 24
+          </h3>
+
+          <span>
+            02 / Digital Experience
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=85"
+            alt="Art direction project"
+          >
+
+        </div>
+
+        <div class="project-info">
+
+          <h3>
+            Arc / Objects
+          </h3>
+
+          <span>
+            03 / Art Direction
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85"
+            alt="Web design project"
+          >
+
+        </div>
+
+        <div class="project-info">
+
+          <h3>
+            Forma
+          </h3>
+
+          <span>
+            04 / Web Design
+          </span>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section about" id="about">
+
+    <div>
+
+      <p class="section-label">
+        02 / ABOUT
+      </p>
+
+      <h2 class="section-title">
+        Design with clarity.
+        <br>
+        <em>Work with character.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="about-text">
+
+      <p>
+        I’m a creative professional focused on building
+        useful, elegant, and memorable digital work.
+        I combine strategy, design, and attention to detail
+        to create experiences that feel as good as they look.
+      </p>
+
+
+      <div class="stats">
+
+        <div class="stat">
+
+          <strong>
+            08+
+          </strong>
+
+          <span>
+            YEARS EXPERIENCE
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>
+            42
+          </strong>
+
+          <span>
+            PROJECTS COMPLETED
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>
+            18
+          </strong>
+
+          <span>
+            HAPPY CLIENTS
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="section" id="services">
+
+    <p class="section-label">
+      03 / SERVICES
+    </p>
+
+    <h2 class="section-title">
+      What I can do.
+    </h2>
+
+
+    <div class="services-grid">
+
+
+      <article class="service">
+
+        <span class="service-number">
+          01
+        </span>
+
+        <h3>
+          Brand Identity
+        </h3>
+
+        <p>
+          Strategic identities that give businesses
+          a clear and memorable visual voice.
+        </p>
+
+      </article>
+
+
+      <article class="service">
+
+        <span class="service-number">
+          02
+        </span>
+
+        <h3>
+          Digital Design
+        </h3>
+
+        <p>
+          Elegant websites and digital experiences
+          designed around people and purpose.
+        </p>
+
+      </article>
+
+
+      <article class="service">
+
+        <span class="service-number">
+          03
+        </span>
+
+        <h3>
+          Art Direction
+        </h3>
+
+        <p>
+          Creative direction that brings campaigns,
+          products, and brands into focus.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section contact" id="contact">
+
+    <p class="section-label">
+      04 / CONTACT
+    </p>
+
+    <h2 class="contact-title">
+      Have a project
+      <br>
+      <em>in mind?</em>
+    </h2>
+
+    <a
+      href="mailto:hello@example.com"
+      class="email"
+    >
+      hello@example.com ↗
+    </a>
+
+
+    <div class="contact-meta">
+
+      <span>
+        London, United Kingdom
+      </span>
+
+      <a href="#">
+        LinkedIn ↗
+      </a>
+
+      <a href="#">
+        Behance ↗
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <span>
+      ROYAL PORTFOLIO
+    </span>
+
+    <span>
+      © 2026 ALL RIGHTS RESERVED
+    </span>
+
+  </footer>
+
+</body>
+  </html>
