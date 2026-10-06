@@ -4,835 +4,1665 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Royal Portfolio | Customize</title>
+  <title>Customize | Royal Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root{
+      --bg:#f4f1eb;
+      --card:#ffffff;
+      --text:#111111;
+      --muted:#77736d;
+      --line:#ddd8d0;
+      --dark:#111111;
+      --accent:#b58b52;
+      --danger:#b33a3a;
     }
 
-    :root {
-      --black: #11110f;
-      --cream: #f3eee5;
-      --paper: #faf9f6;
-      --gold: #b28b52;
-      --gray: #777066;
-      --line: #ddd7cc;
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--black);
-      line-height: 1.5;
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    button,
+    input,
+    textarea{
+      font:inherit;
     }
 
-    .topbar {
-      height: 82px;
-
-      padding: 0 7%;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      background: var(--paper);
-
-      border-bottom: 1px solid var(--line);
+    .topbar{
+      height:72px;
+      background:#111;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 6%;
     }
 
-    .logo {
-      font-size: 18px;
-
-      font-weight: 800;
-
-      letter-spacing: 5px;
+    .brand{
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:3px;
     }
 
-    .logo span {
-      color: var(--gold);
+    .view-btn{
+      text-decoration:none;
+      color:#111;
+      background:#fff;
+      padding:11px 18px;
+      font-size:13px;
+      font-weight:700;
+      border-radius:2px;
     }
 
-    .view-btn {
-      border: 1px solid var(--black);
-
-      padding: 10px 18px;
-
-      font-size: 11px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
+    .page{
+      width:min(1100px,92%);
+      margin:0 auto;
+      padding:55px 0 90px;
     }
 
-    .container {
-      width: min(1050px, 92%);
-
-      margin: 55px auto;
+    .intro{
+      margin-bottom:35px;
     }
 
-    .intro {
-      margin-bottom: 35px;
+    .eyebrow{
+      font-size:11px;
+      letter-spacing:3px;
+      color:var(--accent);
+      font-weight:700;
+      margin-bottom:10px;
     }
 
-    .intro small {
-      display: block;
-
-      font-size: 10px;
-
-      letter-spacing: 3px;
-
-      color: var(--gray);
-
-      margin-bottom: 15px;
+    h1{
+      font-size:clamp(34px,5vw,58px);
+      line-height:1;
+      letter-spacing:-2px;
+      margin-bottom:15px;
     }
 
-    .intro h1 {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(42px, 6vw, 70px);
-
-      line-height: 1;
-
-      letter-spacing: -2px;
-
-      margin-bottom: 15px;
+    .intro p{
+      max-width:650px;
+      color:var(--muted);
+      font-size:15px;
     }
 
-    .intro p {
-      color: #6c675f;
-
-      max-width: 600px;
-
-      font-size: 15px;
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      padding:30px;
+      margin-bottom:22px;
     }
 
-    .panel {
-      background: var(--paper);
-
-      border: 1px solid var(--line);
-
-      padding: 40px;
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:20px;
+      margin-bottom:25px;
+      padding-bottom:18px;
+      border-bottom:1px solid var(--line);
     }
 
-    .section-title {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 30px;
-
-      margin-bottom: 25px;
-
-      padding-bottom: 15px;
-
-      border-bottom: 1px solid var(--line);
+    .section-number{
+      font-size:11px;
+      color:var(--accent);
+      letter-spacing:2px;
+      font-weight:700;
+      margin-bottom:5px;
     }
 
-    .form-grid {
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 22px;
+    .section h2{
+      font-size:23px;
+      letter-spacing:-.5px;
     }
 
-    .field {
-      display: flex;
-
-      flex-direction: column;
+    .section-note{
+      color:var(--muted);
+      font-size:12px;
+      max-width:350px;
+      text-align:right;
     }
 
-    .field.full {
-      grid-column: 1 / -1;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
     }
 
-    label {
-      font-size: 10px;
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:7px;
+    }
 
-      font-weight: bold;
+    .field.full{
+      grid-column:1/-1;
+    }
 
-      letter-spacing: 1.5px;
-
-      text-transform: uppercase;
-
-      margin-bottom: 8px;
+    label{
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:#555;
     }
 
     input,
-    textarea {
-      width: 100%;
-
-      border: 1px solid #d5cfc4;
-
-      background: white;
-
-      padding: 13px 14px;
-
-      font-family: Arial, Helvetica, sans-serif;
-
-      font-size: 14px;
-
-      color: var(--black);
-
-      outline: none;
-    }
-
-    textarea {
-      min-height: 125px;
-
-      resize: vertical;
+    textarea{
+      width:100%;
+      border:1px solid var(--line);
+      background:#faf9f6;
+      padding:13px 14px;
+      color:var(--text);
+      outline:none;
+      border-radius:2px;
+      transition:.2s;
     }
 
     input:focus,
-    textarea:focus {
-      border-color: var(--gold);
+    textarea:focus{
+      border-color:#111;
+      background:#fff;
     }
 
-    .photo-box {
-      margin-top: 35px;
-
-      padding-top: 30px;
-
-      border-top: 1px solid var(--line);
+    textarea{
+      min-height:120px;
+      resize:vertical;
     }
 
-    .photo-preview {
-      width: 130px;
-
-      height: 160px;
-
-      background: #ddd6ca;
-
-      margin-top: 15px;
-
-      overflow: hidden;
+    .photo-area{
+      display:grid;
+      grid-template-columns:170px 1fr;
+      gap:25px;
+      align-items:center;
     }
 
-    .photo-preview img {
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
+    .photo-preview{
+      width:170px;
+      height:210px;
+      background:#eeeae3;
+      border:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
     }
 
-    .photo-note {
-      margin-top: 10px;
-
-      font-size: 12px;
-
-      color: var(--gray);
+    .photo-preview img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .actions {
-      display: flex;
-
-      gap: 12px;
-
-      margin-top: 40px;
-
-      padding-top: 30px;
-
-      border-top: 1px solid var(--line);
+    .photo-placeholder{
+      color:#999;
+      font-size:12px;
+      text-align:center;
+      padding:15px;
     }
 
-    button {
-      border: 0;
-
-      cursor: pointer;
-
-      padding: 14px 25px;
-
-      font-size: 11px;
-
-      font-weight: bold;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
+    .upload-btn{
+      display:inline-block;
+      background:#111;
+      color:#fff;
+      padding:12px 18px;
+      cursor:pointer;
+      font-size:12px;
+      font-weight:700;
+      margin-top:10px;
     }
 
-    .save-btn {
-      background: var(--black);
-
-      color: white;
+    .upload-btn input{
+      display:none;
     }
 
-    .reset-btn {
-      background: transparent;
-
-      border: 1px solid #bbb4a9;
-
-      color: var(--black);
+    .items{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
     }
 
-    .status {
-      margin-top: 18px;
-
-      font-size: 13px;
-
-      color: #6d665c;
-
-      min-height: 20px;
+    .item{
+      border:1px solid var(--line);
+      background:#faf9f6;
+      padding:22px;
+      position:relative;
     }
 
-    @media (max-width: 700px) {
+    .item-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+      margin-bottom:18px;
+    }
 
-      .topbar {
-        height: 70px;
+    .item-title{
+      font-size:16px;
+      font-weight:800;
+    }
 
-        padding: 0 5%;
+    .remove-btn{
+      border:0;
+      background:transparent;
+      color:var(--danger);
+      cursor:pointer;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .add-btn{
+      border:1px solid #111;
+      background:#111;
+      color:#fff;
+      padding:12px 18px;
+      cursor:pointer;
+      font-size:12px;
+      font-weight:700;
+      margin-top:18px;
+    }
+
+    .empty{
+      padding:20px;
+      border:1px dashed var(--line);
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+
+    .bottom-actions{
+      position:sticky;
+      bottom:0;
+      background:rgba(17,17,17,.96);
+      padding:15px 5%;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      z-index:20;
+    }
+
+    .save-btn,
+    .reset-btn{
+      border:0;
+      padding:14px 25px;
+      cursor:pointer;
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .save-btn{
+      background:#fff;
+      color:#111;
+    }
+
+    .reset-btn{
+      background:#333;
+      color:#fff;
+    }
+
+    .success{
+      position:fixed;
+      top:90px;
+      right:25px;
+      background:#111;
+      color:#fff;
+      padding:14px 20px;
+      font-size:13px;
+      transform:translateY(-20px);
+      opacity:0;
+      pointer-events:none;
+      transition:.3s;
+      z-index:50;
+    }
+
+    .success.show{
+      transform:translateY(0);
+      opacity:1;
+    }
+
+    @media(max-width:700px){
+
+      .topbar{
+        padding:0 5%;
       }
 
-      .container {
-        width: 90%;
-
-        margin: 35px auto;
+      .page{
+        width:94%;
+        padding:38px 0 100px;
       }
 
-      .panel {
-        padding: 25px 20px;
+      .section{
+        padding:22px 18px;
       }
 
-      .form-grid {
-        grid-template-columns: 1fr;
+      .grid{
+        grid-template-columns:1fr;
       }
 
-      .field.full {
-        grid-column: auto;
+      .field.full{
+        grid-column:auto;
       }
 
-      .actions {
-        flex-direction: column;
+      .section-head{
+        flex-direction:column;
       }
 
-      button {
-        width: 100%;
+      .section-note{
+        text-align:left;
       }
 
+      .photo-area{
+        grid-template-columns:1fr;
+      }
+
+      .photo-preview{
+        width:150px;
+        height:185px;
+      }
+
+      .bottom-actions{
+        padding:12px;
+      }
+
+      .save-btn,
+      .reset-btn{
+        flex:1;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-
   <header class="topbar">
-
-    <a href="index.html" class="logo">
-      ROYAL<span>.</span>
-    </a>
+    <div class="brand">ROYAL.</div>
 
     <a href="index.html" class="view-btn">
-      View Portfolio ↗
+      View Portfolio
     </a>
-
   </header>
 
 
-  <!-- MAIN -->
-
-  <main class="container">
+  <main class="page">
 
     <div class="intro">
+      <div class="eyebrow">ROYAL PORTFOLIO / CUSTOMIZER</div>
 
-      <small>
-        ROYAL PORTFOLIO / CUSTOMIZER
-      </small>
-
-      <h1>
-        Customize your portfolio.
-      </h1>
+      <h1>Customize your portfolio.</h1>
 
       <p>
-        Update your information, save your changes,
-        and your portfolio will automatically display
-        the new content.
+        Update your information, projects, experience, services and skills.
+        Your changes will appear automatically on the main portfolio.
       </p>
-
     </div>
 
 
-    <section class="panel">
+    <!-- PERSONAL INFORMATION -->
 
-      <h2 class="section-title">
-        Personal Information
-      </h2>
+    <section class="section">
 
-
-      <div class="form-grid">
-
-        <!-- NAME -->
-
-        <div class="field">
-
-          <label>
-            Full Name
-          </label>
-
-          <input
-            type="text"
-            id="fullName"
-            placeholder="Your full name"
-          >
-
+      <div class="section-head">
+        <div>
+          <div class="section-number">01</div>
+          <h2>Personal Information</h2>
         </div>
 
+        <div class="section-note">
+          Your name, professional identity and introduction.
+        </div>
+      </div>
 
-        <!-- JOB -->
+      <div class="grid">
 
         <div class="field">
-
-          <label>
-            Professional Title
-          </label>
-
-          <input
-            type="text"
-            id="jobTitle"
-            placeholder="Creative Director"
-          >
-
+          <label>Full Name</label>
+          <input id="fullName" type="text">
         </div>
 
+        <div class="field">
+          <label>Professional Title</label>
+          <input id="jobTitle" type="text">
+        </div>
 
-        <!-- SUMMARY -->
+        <div class="field">
+          <label>Location</label>
+          <input id="location" type="text">
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input id="email" type="email">
+        </div>
+
+        <div class="field">
+          <label>Phone</label>
+          <input id="phone" type="text">
+        </div>
+
+        <div class="field">
+          <label>Short Introduction</label>
+          <input id="summary" type="text">
+        </div>
 
         <div class="field full">
-
-          <label>
-            Short Introduction
-          </label>
-
-          <textarea
-            id="summary"
-            placeholder="Write a short introduction about yourself..."
-          ></textarea>
-
+          <label>About Me</label>
+          <textarea id="about"></textarea>
         </div>
 
+      </div>
 
-        <!-- ABOUT -->
+    </section>
 
-        <div class="field full">
 
-          <label>
-            About
-          </label>
+    <!-- PROFILE PHOTO -->
 
-          <textarea
-            id="about"
-            placeholder="Tell visitors more about yourself..."
-          ></textarea>
+    <section class="section">
 
+      <div class="section-head">
+        <div>
+          <div class="section-number">02</div>
+          <h2>Profile Photo</h2>
         </div>
 
+        <div class="section-note">
+          Upload a professional portrait for your portfolio.
+        </div>
+      </div>
 
-        <!-- LOCATION -->
+      <div class="photo-area">
 
-        <div class="field">
-
-          <label>
-            Location
-          </label>
-
-          <input
-            type="text"
-            id="location"
-            placeholder="London, United Kingdom"
-          >
-
+        <div class="photo-preview" id="photoPreview">
+          <div class="photo-placeholder">
+            No photo selected
+          </div>
         </div>
 
+        <div>
 
-        <!-- EMAIL -->
+          <p style="color:#777;font-size:13px;margin-bottom:5px;">
+            Recommended: a clear professional portrait.
+          </p>
 
-        <div class="field">
-
-          <label>
-            Email
+          <label class="upload-btn">
+            Upload Photo
+            <input id="photoInput" type="file" accept="image/*">
           </label>
-
-          <input
-            type="email"
-            id="email"
-            placeholder="hello@example.com"
-          >
-
-        </div>
-
-
-        <!-- LINKEDIN -->
-
-        <div class="field">
-
-          <label>
-            LinkedIn URL
-          </label>
-
-          <input
-            type="url"
-            id="linkedin"
-            placeholder="https://linkedin.com/in/username"
-          >
-
-        </div>
-
-
-        <!-- PORTFOLIO -->
-
-        <div class="field">
-
-          <label>
-            Portfolio / Behance URL
-          </label>
-
-          <input
-            type="url"
-            id="portfolio"
-            placeholder="https://behance.net/username"
-          >
 
         </div>
 
       </div>
 
+    </section>
 
-      <!-- PHOTO -->
 
-      <div class="photo-box">
+    <!-- SOCIAL LINKS -->
 
-        <h2 class="section-title">
-          Profile Photo
-        </h2>
+    <section class="section">
 
-        <input
-          type="file"
-          id="photo"
-          accept="image/*"
-        >
-
-        <div class="photo-preview">
-
-          <img
-            id="photoPreview"
-            src=""
-            alt="Profile preview"
-          >
-
+      <div class="section-head">
+        <div>
+          <div class="section-number">03</div>
+          <h2>Social & Contact Links</h2>
         </div>
 
-        <p class="photo-note">
-          Choose a professional photo from your device.
-        </p>
+        <div class="section-note">
+          Add the platforms where clients can find you.
+        </div>
+      </div>
+
+      <div class="grid">
+
+        <div class="field">
+          <label>LinkedIn</label>
+          <input id="linkedin" type="url" placeholder="https://linkedin.com/in/...">
+        </div>
+
+        <div class="field">
+          <label>Behance</label>
+          <input id="behance" type="url" placeholder="https://behance.net/...">
+        </div>
+
+        <div class="field">
+          <label>GitHub</label>
+          <input id="github" type="url" placeholder="https://github.com/...">
+        </div>
+
+        <div class="field">
+          <label>Instagram</label>
+          <input id="instagram" type="url" placeholder="https://instagram.com/...">
+        </div>
+
+        <div class="field">
+          <label>Personal Website</label>
+          <input id="website" type="url" placeholder="https://...">
+        </div>
 
       </div>
 
+    </section>
 
-      <!-- ACTIONS -->
 
-      <div class="actions">
+    <!-- SERVICES -->
 
-        <button
-          class="save-btn"
-          id="saveBtn"
-        >
-          Save Changes
-        </button>
+    <section class="section">
 
-        <button
-          class="reset-btn"
-          id="resetBtn"
-        >
-          Reset Demo
-        </button>
+      <div class="section-head">
+        <div>
+          <div class="section-number">04</div>
+          <h2>Services</h2>
+        </div>
 
+        <div class="section-note">
+          Add the services you offer to clients.
+        </div>
       </div>
 
+      <div class="items" id="servicesList"></div>
 
-      <div
-        class="status"
-        id="status"
-      ></div>
+      <button class="add-btn" type="button" onclick="addService()">
+        + Add Service
+      </button>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section class="section">
+
+      <div class="section-head">
+        <div>
+          <div class="section-number">05</div>
+          <h2>Selected Projects</h2>
+        </div>
+
+        <div class="section-note">
+          Showcase your best work. Projects are the heart of your portfolio.
+        </div>
+      </div>
+
+      <div class="items" id="projectsList"></div>
+
+      <button class="add-btn" type="button" onclick="addProject()">
+        + Add Project
+      </button>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section class="section">
+
+      <div class="section-head">
+        <div>
+          <div class="section-number">06</div>
+          <h2>Experience</h2>
+        </div>
+
+        <div class="section-note">
+          Add your professional experience.
+        </div>
+      </div>
+
+      <div class="items" id="experienceList"></div>
+
+      <button class="add-btn" type="button" onclick="addExperience()">
+        + Add Experience
+      </button>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="section">
+
+      <div class="section-head">
+        <div>
+          <div class="section-number">07</div>
+          <h2>Education</h2>
+        </div>
+
+        <div class="section-note">
+          Add degrees, institutions and study periods.
+        </div>
+      </div>
+
+      <div class="items" id="educationList"></div>
+
+      <button class="add-btn" type="button" onclick="addEducation()">
+        + Add Education
+      </button>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="section">
+
+      <div class="section-head">
+        <div>
+          <div class="section-number">08</div>
+          <h2>Skills</h2>
+        </div>
+
+        <div class="section-note">
+          Add your main professional skills.
+        </div>
+      </div>
+
+      <div class="items" id="skillsList"></div>
+
+      <button class="add-btn" type="button" onclick="addSkill()">
+        + Add Skill
+      </button>
 
     </section>
 
   </main>
 
 
-  <script>
+  <div class="bottom-actions">
 
-    const defaultData = {
+    <button class="reset-btn" onclick="resetDemo()">
+      Reset Demo
+    </button>
 
-      fullName:
-        "Alex Morgan",
+    <button class="save-btn" onclick="saveAll()">
+      Save Changes
+    </button>
 
-      jobTitle:
-        "Creative Director & Digital Designer",
+  </div>
 
-      summary:
-        "I create thoughtful digital experiences, brands, and visual work that turn ideas into memorable results.",
 
-      about:
-        "I’m a creative professional focused on building useful, elegant, and memorable digital work. I combine strategy, design, and attention to detail to create experiences that feel as good as they look.",
+  <div class="success" id="successMessage">
+    Changes saved successfully.
+  </div>
 
-      location:
-        "London, United Kingdom",
 
-      email:
-        "hello@example.com",
+<script>
 
-      linkedin:
-        "https://linkedin.com",
+const STORAGE_KEY = "royalPortfolioData";
+const PHOTO_KEY = "royalPortfolioPhoto";
 
-      portfolio:
-        "https://behance.net"
+
+const defaultData = {
+
+  fullName: "Alex Morgan",
+
+  jobTitle: "Creative Director & Digital Designer",
+
+  summary:
+    "I create thoughtful digital experiences, brands, and visual work that turn ideas into memorable results.",
+
+  about:
+    "I’m a creative professional focused on building useful, elegant, and memorable digital work. I combine strategy, design, and attention to detail to create experiences that feel as good as they look.",
+
+  location: "London, United Kingdom",
+
+  email: "hello@example.com",
+
+  phone: "+44 20 7946 0958",
+
+  linkedin: "https://linkedin.com",
+
+  behance: "https://behance.net",
+
+  github: "https://github.com",
+
+  instagram: "https://instagram.com",
+
+  website: "https://example.com",
+
+
+  services: [
+
+    {
+      title: "Brand Identity",
+      description:
+        "Creating distinctive visual identities that give brands a clear and memorable presence."
+    },
+
+    {
+      title: "Digital Design",
+      description:
+        "Designing modern digital experiences focused on clarity, usability and visual impact."
+    },
+
+    {
+      title: "Art Direction",
+      description:
+        "Developing creative direction and visual systems for digital and brand projects."
+    }
+
+  ],
+
+
+  projects: [
+
+    {
+      name: "North Studio",
+      category: "Brand Identity",
+      description:
+        "A complete visual identity created for a modern creative studio.",
+      image:
+        "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80",
+      link: "https://example.com"
+    },
+
+    {
+      name: "Maison 24",
+      category: "Digital Experience",
+      description:
+        "A refined digital experience designed for a contemporary lifestyle brand.",
+      image:
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80",
+      link: "https://example.com"
+    },
+
+    {
+      name: "Arc / Objects",
+      category: "Art Direction",
+      description:
+        "Creative direction and visual storytelling for a premium objects collection.",
+      image:
+        "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=80",
+      link: "https://example.com"
+    }
+
+  ],
+
+
+  experience: [
+
+    {
+      title: "Creative Director",
+      company: "North Studio",
+      period: "2021 — Present",
+      description:
+        "Leading creative direction, brand projects and digital experiences for a range of modern businesses."
+    },
+
+    {
+      title: "Senior Designer",
+      company: "Studio Eleven",
+      period: "2018 — 2021",
+      description:
+        "Designed digital products, brand identities and campaigns for international clients."
+    }
+
+  ],
+
+
+  education: [
+
+    {
+      degree: "BA Graphic Design",
+      institution: "Central Saint Martins",
+      period: "2014 — 2017"
+    }
+
+  ],
+
+
+  skills: [
+
+    "Brand Strategy",
+    "Art Direction",
+    "UI / UX Design",
+    "Visual Identity",
+    "Creative Direction",
+    "Digital Design"
+
+  ]
+
+};
+
+
+let data = loadData();
+
+
+function loadData(){
+
+  try{
+
+    const saved =
+      localStorage.getItem(STORAGE_KEY);
+
+    if(saved){
+
+      const parsed = JSON.parse(saved);
+
+      return {
+        ...defaultData,
+        ...parsed
+      };
+
+    }
+
+  }catch(error){
+
+    console.error(error);
+
+  }
+
+  return JSON.parse(JSON.stringify(defaultData));
+
+}
+
+
+function setValue(id, value){
+
+  const element =
+    document.getElementById(id);
+
+  if(element){
+
+    element.value = value || "";
+
+  }
+
+}
+
+
+function getValue(id){
+
+  const element =
+    document.getElementById(id);
+
+  return element ? element.value.trim() : "";
+
+}
+
+
+function renderBasicFields(){
+
+  setValue("fullName", data.fullName);
+  setValue("jobTitle", data.jobTitle);
+  setValue("summary", data.summary);
+  setValue("about", data.about);
+  setValue("location", data.location);
+  setValue("email", data.email);
+  setValue("phone", data.phone);
+
+  setValue("linkedin", data.linkedin);
+  setValue("behance", data.behance);
+  setValue("github", data.github);
+  setValue("instagram", data.instagram);
+  setValue("website", data.website);
+
+}
+
+
+function renderServices(){
+
+  const container =
+    document.getElementById("servicesList");
+
+  container.innerHTML = "";
+
+  if(!data.services || !data.services.length){
+
+    container.innerHTML =
+      '<div class="empty">No services added yet.</div>';
+
+    return;
+
+  }
+
+  data.services.forEach((service,index)=>{
+
+    const item =
+      document.createElement("div");
+
+    item.className = "item";
+
+    item.innerHTML = `
+
+      <div class="item-top">
+
+        <div class="item-title">
+          Service ${index + 1}
+        </div>
+
+        <button
+          class="remove-btn"
+          type="button"
+          onclick="removeService(${index})">
+          Remove
+        </button>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="field">
+
+          <label>Service Name</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(service.title)}"
+            oninput="data.services[${index}].title=this.value">
+
+        </div>
+
+        <div class="field full">
+
+          <label>Description</label>
+
+          <textarea
+            oninput="data.services[${index}].description=this.value">${escapeHtml(service.description)}</textarea>
+
+        </div>
+
+      </div>
+
+    `;
+
+    container.appendChild(item);
+
+  });
+
+}
+
+
+function addService(){
+
+  if(!data.services){
+
+    data.services = [];
+
+  }
+
+  data.services.push({
+
+    title: "New Service",
+
+    description:
+      "Describe the service you offer."
+
+  });
+
+  renderServices();
+
+}
+
+
+function removeService(index){
+
+  data.services.splice(index,1);
+
+  renderServices();
+
+}
+
+
+function renderProjects(){
+
+  const container =
+    document.getElementById("projectsList");
+
+  container.innerHTML = "";
+
+  if(!data.projects || !data.projects.length){
+
+    container.innerHTML =
+      '<div class="empty">No projects added yet.</div>';
+
+    return;
+
+  }
+
+  data.projects.forEach((project,index)=>{
+
+    const item =
+      document.createElement("div");
+
+    item.className = "item";
+
+    item.innerHTML = `
+
+      <div class="item-top">
+
+        <div class="item-title">
+          Project ${index + 1}
+        </div>
+
+        <button
+          class="remove-btn"
+          type="button"
+          onclick="removeProject(${index})">
+          Remove
+        </button>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="field">
+
+          <label>Project Name</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(project.name)}"
+            oninput="data.projects[${index}].name=this.value">
+
+        </div>
+
+        <div class="field">
+
+          <label>Category</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(project.category)}"
+            oninput="data.projects[${index}].category=this.value">
+
+        </div>
+
+        <div class="field full">
+
+          <label>Project Description</label>
+
+          <textarea
+            oninput="data.projects[${index}].description=this.value">${escapeHtml(project.description)}</textarea>
+
+        </div>
+
+        <div class="field">
+
+          <label>Project Image URL</label>
+
+          <input
+            type="url"
+            value="${escapeAttr(project.image)}"
+            placeholder="https://..."
+            oninput="data.projects[${index}].image=this.value">
+
+        </div>
+
+        <div class="field">
+
+          <label>Project Link</label>
+
+          <input
+            type="url"
+            value="${escapeAttr(project.link)}"
+            placeholder="https://..."
+            oninput="data.projects[${index}].link=this.value">
+
+        </div>
+
+      </div>
+
+    `;
+
+    container.appendChild(item);
+
+  });
+
+}
+
+
+function addProject(){
+
+  if(!data.projects){
+
+    data.projects = [];
+
+  }
+
+  data.projects.push({
+
+    name: "New Project",
+
+    category: "Project Category",
+
+    description:
+      "Describe this project and the work completed.",
+
+    image:
+      "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80",
+
+    link:
+      "https://example.com"
+
+  });
+
+  renderProjects();
+
+}
+
+
+function removeProject(index){
+
+  data.projects.splice(index,1);
+
+  renderProjects();
+
+}
+
+
+function renderExperience(){
+
+  const container =
+    document.getElementById("experienceList");
+
+  container.innerHTML = "";
+
+  if(!data.experience || !data.experience.length){
+
+    container.innerHTML =
+      '<div class="empty">No experience added yet.</div>';
+
+    return;
+
+  }
+
+  data.experience.forEach((job,index)=>{
+
+    const item =
+      document.createElement("div");
+
+    item.className = "item";
+
+    item.innerHTML = `
+
+      <div class="item-top">
+
+        <div class="item-title">
+          Experience ${index + 1}
+        </div>
+
+        <button
+          class="remove-btn"
+          type="button"
+          onclick="removeExperience(${index})">
+          Remove
+        </button>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="field">
+
+          <label>Job Title</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(job.title)}"
+            oninput="data.experience[${index}].title=this.value">
+
+        </div>
+
+        <div class="field">
+
+          <label>Company</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(job.company)}"
+            oninput="data.experience[${index}].company=this.value">
+
+        </div>
+
+        <div class="field">
+
+          <label>Period</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(job.period)}"
+            oninput="data.experience[${index}].period=this.value">
+
+        </div>
+
+        <div class="field full">
+
+          <label>Description</label>
+
+          <textarea
+            oninput="data.experience[${index}].description=this.value">${escapeHtml(job.description)}</textarea>
+
+        </div>
+
+      </div>
+
+    `;
+
+    container.appendChild(item);
+
+  });
+
+}
+
+
+function addExperience(){
+
+  if(!data.experience){
+
+    data.experience = [];
+
+  }
+
+  data.experience.push({
+
+    title: "New Position",
+
+    company: "Company Name",
+
+    period: "2024 — Present",
+
+    description:
+      "Describe your responsibilities and achievements."
+
+  });
+
+  renderExperience();
+
+}
+
+
+function removeExperience(index){
+
+  data.experience.splice(index,1);
+
+  renderExperience();
+
+}
+
+
+function renderEducation(){
+
+  const container =
+    document.getElementById("educationList");
+
+  container.innerHTML = "";
+
+  if(!data.education || !data.education.length){
+
+    container.innerHTML =
+      '<div class="empty">No education added yet.</div>';
+
+    return;
+
+  }
+
+  data.education.forEach((education,index)=>{
+
+    const item =
+      document.createElement("div");
+
+    item.className = "item";
+
+    item.innerHTML = `
+
+      <div class="item-top">
+
+        <div class="item-title">
+          Education ${index + 1}
+        </div>
+
+        <button
+          class="remove-btn"
+          type="button"
+          onclick="removeEducation(${index})">
+          Remove
+        </button>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="field">
+
+          <label>Degree</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(education.degree)}"
+            oninput="data.education[${index}].degree=this.value">
+
+        </div>
+
+        <div class="field">
+
+          <label>Institution</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(education.institution)}"
+            oninput="data.education[${index}].institution=this.value">
+
+        </div>
+
+        <div class="field">
+
+          <label>Period</label>
+
+          <input
+            type="text"
+            value="${escapeAttr(education.period)}"
+            oninput="data.education[${index}].period=this.value">
+
+        </div>
+
+      </div>
+
+    `;
+
+    container.appendChild(item);
+
+  });
+
+}
+
+
+function addEducation(){
+
+  if(!data.education){
+
+    data.education = [];
+
+  }
+
+  data.education.push({
+
+    degree: "New Degree",
+
+    institution: "Institution Name",
+
+    period: "2020 — 2024"
+
+  });
+
+  renderEducation();
+
+}
+
+
+function removeEducation(index){
+
+  data.education.splice(index,1);
+
+  renderEducation();
+
+}
+
+
+function renderSkills(){
+
+  const container =
+    document.getElementById("skillsList");
+
+  container.innerHTML = "";
+
+  if(!data.skills || !data.skills.length){
+
+    container.innerHTML =
+      '<div class="empty">No skills added yet.</div>';
+
+    return;
+
+  }
+
+  data.skills.forEach((skill,index)=>{
+
+    const item =
+      document.createElement("div");
+
+    item.className = "item";
+
+    item.innerHTML = `
+
+      <div class="item-top">
+
+        <div class="item-title">
+          Skill ${index + 1}
+        </div>
+
+        <button
+          class="remove-btn"
+          type="button"
+          onclick="removeSkill(${index})">
+          Remove
+        </button>
+
+      </div>
+
+      <div class="field">
+
+        <label>Skill</label>
+
+        <input
+          type="text"
+          value="${escapeAttr(skill)}"
+          oninput="data.skills[${index}]=this.value">
+
+      </div>
+
+    `;
+
+    container.appendChild(item);
+
+  });
+
+}
+
+
+function addSkill(){
+
+  if(!data.skills){
+
+    data.skills = [];
+
+  }
+
+  data.skills.push("New Skill");
+
+  renderSkills();
+
+}
+
+
+function removeSkill(index){
+
+  data.skills.splice(index,1);
+
+  renderSkills();
+
+}
+
+
+function saveAll(){
+
+  data.fullName = getValue("fullName");
+  data.jobTitle = getValue("jobTitle");
+  data.summary = getValue("summary");
+  data.about = getValue("about");
+  data.location = getValue("location");
+  data.email = getValue("email");
+  data.phone = getValue("phone");
+
+  data.linkedin = getValue("linkedin");
+  data.behance = getValue("behance");
+  data.github = getValue("github");
+  data.instagram = getValue("instagram");
+  data.website = getValue("website");
+
+
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(data)
+  );
+
+
+  showSuccess();
+
+}
+
+
+function showSuccess(){
+
+  const message =
+    document.getElementById("successMessage");
+
+  message.classList.add("show");
+
+  setTimeout(()=>{
+
+    message.classList.remove("show");
+
+  },2500);
+
+}
+
+
+function resetDemo(){
+
+  const confirmed =
+    confirm(
+      "Reset the portfolio to the original demo data?"
+    );
+
+  if(!confirmed) return;
+
+
+  data =
+    JSON.parse(
+      JSON.stringify(defaultData)
+    );
+
+
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(data)
+  );
+
+
+  localStorage.removeItem(
+    PHOTO_KEY
+  );
+
+
+  renderAll();
+
+}
+
+
+function renderPhoto(){
+
+  const preview =
+    document.getElementById("photoPreview");
+
+  const savedPhoto =
+    localStorage.getItem(PHOTO_KEY);
+
+  if(savedPhoto){
+
+    preview.innerHTML =
+      `<img src="${savedPhoto}" alt="Profile Photo">`;
+
+  }else{
+
+    preview.innerHTML =
+      `<div class="photo-placeholder">
+        No photo selected
+      </div>`;
+
+  }
+
+}
+
+
+document
+  .getElementById("photoInput")
+  .addEventListener("change",function(){
+
+    const file =
+      this.files[0];
+
+    if(!file) return;
+
+
+    const reader =
+      new FileReader();
+
+
+    reader.onload = function(event){
+
+      const image =
+        event.target.result;
+
+      localStorage.setItem(
+        PHOTO_KEY,
+        image
+      );
+
+      renderPhoto();
 
     };
 
 
-    const savedData =
-      JSON.parse(
-        localStorage.getItem("royalPortfolioData")
-      ) || defaultData;
+    reader.readAsDataURL(file);
 
+  });
 
-    const fullName =
-      document.getElementById("fullName");
 
-    const jobTitle =
-      document.getElementById("jobTitle");
+function escapeHtml(value){
 
-    const summary =
-      document.getElementById("summary");
+  return String(value || "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 
-    const about =
-      document.getElementById("about");
+}
 
-    const location =
-      document.getElementById("location");
 
-    const email =
-      document.getElementById("email");
+function escapeAttr(value){
 
-    const linkedin =
-      document.getElementById("linkedin");
+  return escapeHtml(value);
 
-    const portfolio =
-      document.getElementById("portfolio");
+}
 
-    const photo =
-      document.getElementById("photo");
 
-    const photoPreview =
-      document.getElementById("photoPreview");
+function renderAll(){
 
-    const status =
-      document.getElementById("status");
+  renderBasicFields();
 
+  renderServices();
 
-    /* LOAD SAVED DATA */
+  renderProjects();
 
-    fullName.value =
-      savedData.fullName || "";
+  renderExperience();
 
-    jobTitle.value =
-      savedData.jobTitle || "";
+  renderEducation();
 
-    summary.value =
-      savedData.summary || "";
+  renderSkills();
 
-    about.value =
-      savedData.about || "";
+  renderPhoto();
 
-    location.value =
-      savedData.location || "";
+}
 
-    email.value =
-      savedData.email || "";
 
-    linkedin.value =
-      savedData.linkedin || "";
+renderAll();
 
-    portfolio.value =
-      savedData.portfolio || "";
-
-
-    /* LOAD PHOTO */
-
-    const savedPhoto =
-      localStorage.getItem(
-        "royalPortfolioPhoto"
-      );
-
-    if (savedPhoto) {
-
-      photoPreview.src =
-        savedPhoto;
-
-    }
-
-
-    /* PHOTO PREVIEW */
-
-    photo.addEventListener(
-      "change",
-      function () {
-
-        const file =
-          this.files[0];
-
-        if (!file) return;
-
-        const reader =
-          new FileReader();
-
-        reader.onload =
-          function (event) {
-
-            photoPreview.src =
-              event.target.result;
-
-          };
-
-        reader.readAsDataURL(file);
-
-      }
-    );
-
-
-    /* SAVE */
-
-    document
-      .getElementById("saveBtn")
-      .addEventListener(
-        "click",
-        function () {
-
-          const data = {
-
-            fullName:
-              fullName.value.trim(),
-
-            jobTitle:
-              jobTitle.value.trim(),
-
-            summary:
-              summary.value.trim(),
-
-            about:
-              about.value.trim(),
-
-            location:
-              location.value.trim(),
-
-            email:
-              email.value.trim(),
-
-            linkedin:
-              linkedin.value.trim(),
-
-            portfolio:
-              portfolio.value.trim()
-
-          };
-
-
-          localStorage.setItem(
-            "royalPortfolioData",
-            JSON.stringify(data)
-          );
-
-
-          const file =
-            photo.files[0];
-
-
-          if (file) {
-
-            const reader =
-              new FileReader();
-
-            reader.onload =
-              function (event) {
-
-                localStorage.setItem(
-                  "royalPortfolioPhoto",
-                  event.target.result
-                );
-
-                showSaved();
-
-              };
-
-            reader.readAsDataURL(file);
-
-          } else {
-
-            showSaved();
-
-          }
-
-        }
-      );
-
-
-    function showSaved() {
-
-      status.textContent =
-        "Changes saved successfully. Open View Portfolio to see your updates.";
-
-      setTimeout(
-        function () {
-
-          status.textContent = "";
-
-        },
-        4000
-      );
-
-    }
-
-
-    /* RESET */
-
-    document
-      .getElementById("resetBtn")
-      .addEventListener(
-        "click",
-        function () {
-
-          const confirmed =
-            confirm(
-              "Reset the demo data?"
-            );
-
-          if (!confirmed) return;
-
-
-          localStorage.removeItem(
-            "royalPortfolioData"
-          );
-
-          localStorage.removeItem(
-            "royalPortfolioPhoto"
-          );
-
-          location.reload();
-
-        }
-      );
-
-  </script>
+</script>
 
 </body>
 </html>
