@@ -51,14 +51,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       position: sticky;
       top: 0;
       z-index: 100;
-
       background: rgba(250, 249, 246, 0.94);
       backdrop-filter: blur(12px);
-
       border-bottom: 1px solid var(--line);
     }
 
@@ -86,7 +83,6 @@
     .customize-btn {
       padding: 10px 18px;
       border: 1px solid var(--black);
-
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -96,18 +92,12 @@
 
     .hero {
       min-height: calc(100vh - 82px);
-
       padding: 8vw 7%;
-
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
-
       gap: 7vw;
-
       align-items: center;
-
       background: var(--cream);
-
       overflow: hidden;
     }
 
@@ -116,19 +106,14 @@
       font-weight: bold;
       letter-spacing: 3px;
       color: #777066;
-
       margin-bottom: 25px;
     }
 
     .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: clamp(65px, 8vw, 125px);
-
       line-height: 0.92;
-
       letter-spacing: -5px;
-
       max-width: 850px;
     }
 
@@ -139,33 +124,24 @@
 
     .hero-description {
       max-width: 520px;
-
       margin-top: 35px;
-
       font-size: 17px;
-
       color: #625d55;
     }
 
     .hero-buttons {
       display: flex;
       align-items: center;
-
       gap: 28px;
-
       margin-top: 35px;
     }
 
     .primary-btn {
       display: inline-block;
-
       background: var(--black);
       color: white;
-
       padding: 15px 24px;
-
       font-size: 11px;
-
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -179,61 +155,43 @@
 
     .hero-image-area {
       position: relative;
-
       min-height: 590px;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
     }
 
     .hero-image {
       width: min(390px, 75%);
-
       aspect-ratio: 4 / 5;
-
       background: #d9d0c1;
-
       overflow: hidden;
-
       position: relative;
-
       z-index: 2;
     }
 
     .hero-image img {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
     }
 
     .availability {
       position: absolute;
-
       right: 0;
       bottom: 14%;
-
       z-index: 5;
-
       background: var(--black);
       color: white;
-
       padding: 22px 25px;
-
       min-width: 205px;
     }
 
     .availability small {
       display: block;
-
       color: #aaa59d;
-
       font-size: 8px;
-
       letter-spacing: 2px;
-
       margin-bottom: 6px;
     }
 
@@ -243,29 +201,19 @@
 
     .circle {
       position: absolute;
-
       left: 0;
       top: 8%;
-
       width: 150px;
       height: 150px;
-
       border: 1px solid #c3bbae;
-
       border-radius: 50%;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       text-align: center;
-
       font-size: 9px;
-
       letter-spacing: 2px;
-
       color: #777066;
-
       transform: rotate(-12deg);
     }
 
@@ -273,23 +221,15 @@
 
     .marquee {
       height: 70px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       gap: 22px;
-
       background: var(--black);
-
       color: white;
-
       font-size: 9px;
-
       letter-spacing: 2px;
-
       overflow: hidden;
-
       white-space: nowrap;
     }
 
@@ -309,23 +249,16 @@
 
     .section-label {
       font-size: 10px;
-
       letter-spacing: 3px;
-
       color: #777066;
-
       font-weight: bold;
-
       margin-bottom: 22px;
     }
 
     .section-title {
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: clamp(50px, 6vw, 85px);
-
       line-height: 1;
-
       letter-spacing: -3px;
     }
 
@@ -333,21 +266,15 @@
 
     .projects-header {
       display: flex;
-
       justify-content: space-between;
-
       align-items: end;
-
       gap: 30px;
-
       margin-bottom: 60px;
     }
 
     .projects {
       display: grid;
-
       grid-template-columns: repeat(2, 1fr);
-
       gap: 70px 30px;
     }
 
@@ -357,18 +284,14 @@
 
     .project-image {
       aspect-ratio: 1.25;
-
       background: #ddd6ca;
-
       overflow: hidden;
     }
 
     .project-image img {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
-
       transition: transform 0.6s ease;
     }
 
@@ -376,47 +299,64 @@
       transform: scale(1.04);
     }
 
+    .project-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      color: #918a7e;
+      background:
+        linear-gradient(135deg, #e7e0d5, #d6cdbf);
+    }
+
     .project-info {
       padding-top: 18px;
-
       display: flex;
-
       justify-content: space-between;
-
       gap: 20px;
-
       border-bottom: 1px solid var(--line);
-
       padding-bottom: 18px;
     }
 
     .project-info h3 {
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: 28px;
     }
 
     .project-info span {
       font-size: 9px;
-
       letter-spacing: 1px;
-
       color: #777066;
-
       text-transform: uppercase;
+      text-align: right;
+    }
+
+    .project-description {
+      color: #706b63;
+      font-size: 13px;
+      margin-top: 12px;
+      max-width: 600px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
     }
 
     /* ABOUT */
 
     .about {
       background: var(--black);
-
       color: white;
-
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 8vw;
     }
 
@@ -426,115 +366,156 @@
 
     .about-text {
       padding-top: 45px;
-
       color: #c8c3bb;
-
       font-size: 19px;
-
       max-width: 600px;
     }
 
     .stats {
       margin-top: 60px;
-
       padding-top: 25px;
-
       border-top: 1px solid #3c3935;
-
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
       gap: 25px;
     }
 
     .stat strong {
       display: block;
-
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: 40px;
-
       color: white;
     }
 
     .stat span {
       display: block;
-
       margin-top: 3px;
-
       font-size: 9px;
-
       letter-spacing: 1px;
-
       color: #99938a;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-list {
+      margin-top: 60px;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-item {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 30px;
+    }
+
+    .experience-period,
+    .education-period {
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: #777066;
+    }
+
+    .experience-item h3,
+    .education-item h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+    }
+
+    .experience-company,
+    .education-institution {
+      font-size: 12px;
+      color: #777066;
+      margin-top: 5px;
+    }
+
+    .experience-description {
+      color: #706b63;
+      font-size: 13px;
+      margin-top: 12px;
     }
 
     /* SERVICES */
 
     .services-grid {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
       border-top: 1px solid var(--line);
-
       margin-top: 60px;
     }
 
     .service {
       padding: 35px 25px 45px 0;
-
       border-bottom: 1px solid var(--line);
     }
 
     .service:not(:first-child) {
       padding-left: 25px;
-
       border-left: 1px solid var(--line);
     }
 
     .service-number {
       color: #8b8479;
-
       font-size: 10px;
     }
 
     .service h3 {
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: 30px;
-
       margin-top: 35px;
-
       margin-bottom: 12px;
     }
 
     .service p {
       color: #706b63;
-
       font-size: 14px;
-
       max-width: 300px;
+    }
+
+    /* EDUCATION */
+
+    .education-list {
+      margin-top: 60px;
+      border-top: 1px solid var(--line);
+    }
+
+    .education-item {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 30px;
+    }
+
+    /* SKILLS */
+
+    .skills-wrap {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      border: 1px solid var(--line);
+      padding: 10px 16px;
+      font-size: 11px;
+      letter-spacing: 1px;
     }
 
     /* CONTACT */
 
     .contact {
       background: var(--cream);
-
       min-height: 70vh;
     }
 
     .contact-title {
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: clamp(65px, 9vw, 130px);
-
       line-height: 0.9;
-
       letter-spacing: -5px;
-
       margin-bottom: 50px;
     }
 
@@ -544,42 +525,42 @@
 
     .email {
       display: inline-block;
-
       font-size: clamp(22px, 3vw, 40px);
-
       border-bottom: 1px solid var(--black);
-
       padding-bottom: 5px;
     }
 
     .contact-meta {
       display: flex;
-
+      flex-wrap: wrap;
       gap: 35px;
-
       margin-top: 70px;
-
       color: #6e685f;
-
       font-size: 12px;
+    }
+
+    .contact-meta a:hover {
+      color: var(--black);
     }
 
     /* FOOTER */
 
     footer {
       background: var(--black);
-
       color: #aaa49c;
-
       padding: 25px 7%;
-
       display: flex;
-
       justify-content: space-between;
-
       font-size: 9px;
-
       letter-spacing: 2px;
+    }
+
+    /* EMPTY SECTION */
+
+    .empty-message {
+      color: #777066;
+      font-size: 14px;
+      padding: 30px 0;
     }
 
     /* MOBILE */
@@ -588,7 +569,6 @@
 
       .nav {
         height: 70px;
-
         padding: 0 5%;
       }
 
@@ -598,13 +578,11 @@
 
       .hero {
         grid-template-columns: 1fr;
-
         padding: 14vw 6% 12vw;
       }
 
       .hero h1 {
         font-size: 64px;
-
         letter-spacing: -3px;
       }
 
@@ -626,13 +604,11 @@
 
       .projects-header {
         display: block;
-
         margin-bottom: 45px;
       }
 
       .projects {
         grid-template-columns: 1fr;
-
         gap: 55px;
       }
 
@@ -642,7 +618,6 @@
 
       .about {
         grid-template-columns: 1fr;
-
         gap: 25px;
       }
 
@@ -660,19 +635,22 @@
 
       .service:not(:first-child) {
         padding-left: 0;
-
         border-left: 0;
+      }
+
+      .experience-item,
+      .education-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
       }
 
       .contact-meta {
         flex-wrap: wrap;
-
         margin-top: 45px;
       }
 
       footer {
         flex-direction: column;
-
         gap: 15px;
       }
     }
@@ -690,15 +668,11 @@
     </a>
 
     <nav class="nav-links">
-
       <a href="#work">Work</a>
-
       <a href="#about">About</a>
-
       <a href="#services">Services</a>
-
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
-
     </nav>
 
     <a href="customize.html" class="customize-btn">
@@ -718,13 +692,13 @@
         CREATIVE PROFESSIONAL / PORTFOLIO
       </p>
 
-      <h1>
+      <h1 id="heroName">
         Ideas that
         <br>
         <em>leave a mark.</em>
       </h1>
 
-      <p class="hero-description">
+      <p class="hero-description" id="heroDescription">
         I create thoughtful digital experiences, brands,
         and visual work that turn ideas into memorable results.
       </p>
@@ -749,6 +723,7 @@
       <div class="hero-image">
 
         <img
+          id="profilePhoto"
           src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85"
           alt="Professional portrait"
         >
@@ -783,17 +758,11 @@
   <div class="marquee">
 
     <span>SELECTED WORK</span>
-
     <b>✦</b>
-
     <span>CREATIVE DIRECTION</span>
-
     <b>✦</b>
-
     <span>DIGITAL EXPERIENCES</span>
-
     <b>✦</b>
-
     <span>BRAND DESIGN</span>
 
   </div>
@@ -820,115 +789,7 @@
 
     </div>
 
-
-    <div class="projects">
-
-
-      <article class="project">
-
-        <div class="project-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85"
-            alt="Brand identity project"
-          >
-
-        </div>
-
-        <div class="project-info">
-
-          <h3>
-            North Studio
-          </h3>
-
-          <span>
-            01 / Brand Identity
-          </span>
-
-        </div>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=85"
-            alt="Digital experience project"
-          >
-
-        </div>
-
-        <div class="project-info">
-
-          <h3>
-            Maison 24
-          </h3>
-
-          <span>
-            02 / Digital Experience
-          </span>
-
-        </div>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=85"
-            alt="Art direction project"
-          >
-
-        </div>
-
-        <div class="project-info">
-
-          <h3>
-            Arc / Objects
-          </h3>
-
-          <span>
-            03 / Art Direction
-          </span>
-
-        </div>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85"
-            alt="Web design project"
-          >
-
-        </div>
-
-        <div class="project-info">
-
-          <h3>
-            Forma
-          </h3>
-
-          <span>
-            04 / Web Design
-          </span>
-
-        </div>
-
-      </article>
-
-
-    </div>
+    <div class="projects" id="projectsContainer"></div>
 
   </section>
 
@@ -954,7 +815,7 @@
 
     <div class="about-text">
 
-      <p>
+      <p id="aboutText">
         I’m a creative professional focused on building
         useful, elegant, and memorable digital work.
         I combine strategy, design, and attention to detail
@@ -965,41 +826,18 @@
       <div class="stats">
 
         <div class="stat">
-
-          <strong>
-            08+
-          </strong>
-
-          <span>
-            YEARS EXPERIENCE
-          </span>
-
+          <strong id="experienceCount">08+</strong>
+          <span>YEARS EXPERIENCE</span>
         </div>
 
-
         <div class="stat">
-
-          <strong>
-            42
-          </strong>
-
-          <span>
-            PROJECTS COMPLETED
-          </span>
-
+          <strong id="projectsCount">42</strong>
+          <span>PROJECTS COMPLETED</span>
         </div>
 
-
         <div class="stat">
-
-          <strong>
-            18
-          </strong>
-
-          <span>
-            HAPPY CLIENTS
-          </span>
-
+          <strong id="clientsCount">18</strong>
+          <span>HAPPY CLIENTS</span>
         </div>
 
       </div>
@@ -1021,65 +859,58 @@
       What I can do.
     </h2>
 
+    <div class="services-grid" id="servicesContainer"></div>
 
-    <div class="services-grid">
-
-
-      <article class="service">
-
-        <span class="service-number">
-          01
-        </span>
-
-        <h3>
-          Brand Identity
-        </h3>
-
-        <p>
-          Strategic identities that give businesses
-          a clear and memorable visual voice.
-        </p>
-
-      </article>
+  </section>
 
 
-      <article class="service">
+  <!-- EXPERIENCE -->
 
-        <span class="service-number">
-          02
-        </span>
+  <section class="section" id="experience">
 
-        <h3>
-          Digital Design
-        </h3>
+    <p class="section-label">
+      04 / EXPERIENCE
+    </p>
 
-        <p>
-          Elegant websites and digital experiences
-          designed around people and purpose.
-        </p>
+    <h2 class="section-title">
+      Where I've worked.
+    </h2>
 
-      </article>
+    <div class="experience-list" id="experienceContainer"></div>
 
-
-      <article class="service">
-
-        <span class="service-number">
-          03
-        </span>
-
-        <h3>
-          Art Direction
-        </h3>
-
-        <p>
-          Creative direction that brings campaigns,
-          products, and brands into focus.
-        </p>
-
-      </article>
+  </section>
 
 
-    </div>
+  <!-- EDUCATION -->
+
+  <section class="section" id="education">
+
+    <p class="section-label">
+      05 / EDUCATION
+    </p>
+
+    <h2 class="section-title">
+      Education.
+    </h2>
+
+    <div class="education-list" id="educationContainer"></div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section class="section" id="skills">
+
+    <p class="section-label">
+      06 / SKILLS
+    </p>
+
+    <h2 class="section-title">
+      Skills & expertise.
+    </h2>
+
+    <div class="skills-wrap" id="skillsContainer"></div>
 
   </section>
 
@@ -1089,7 +920,7 @@
   <section class="section contact" id="contact">
 
     <p class="section-label">
-      04 / CONTACT
+      07 / CONTACT
     </p>
 
     <h2 class="contact-title">
@@ -1099,28 +930,14 @@
     </h2>
 
     <a
+      id="emailLink"
       href="mailto:hello@example.com"
       class="email"
     >
       hello@example.com ↗
     </a>
 
-
-    <div class="contact-meta">
-
-      <span>
-        London, United Kingdom
-      </span>
-
-      <a href="#">
-        LinkedIn ↗
-      </a>
-
-      <a href="#">
-        Behance ↗
-      </a>
-
-    </div>
+    <div class="contact-meta" id="contactMeta"></div>
 
   </section>
 
@@ -1139,5 +956,782 @@
 
   </footer>
 
+
+  <script>
+
+    /* =========================================
+       DEFAULT DEMO DATA
+    ========================================= */
+
+    const defaultData = {
+
+      fullName: "Daniel Carter",
+
+      jobTitle: "Senior Creative Designer",
+
+      location: "London, United Kingdom",
+
+      email: "hello@example.com",
+
+      phone: "+44 20 1234 5678",
+
+      summary:
+        "I create thoughtful digital experiences, brands, and visual work that turn ideas into memorable results.",
+
+      about:
+        "I’m a creative professional focused on building useful, elegant, and memorable digital work. I combine strategy, design, and attention to detail to create experiences that feel as good as they look.",
+
+      linkedin: "#",
+
+      behance: "#",
+
+      github: "#",
+
+      instagram: "#",
+
+      website: "#",
+
+      services: [
+
+        {
+          title: "Brand Identity",
+          description:
+            "Strategic identities that give businesses a clear and memorable visual voice."
+        },
+
+        {
+          title: "Digital Design",
+          description:
+            "Elegant websites and digital experiences designed around people and purpose."
+        },
+
+        {
+          title: "Art Direction",
+          description:
+            "Creative direction that brings campaigns, products, and brands into focus."
+        }
+
+      ],
+
+      projects: [
+
+        {
+          name: "North Studio",
+          category: "Brand Identity",
+          description: "",
+          link: "",
+          image:
+            "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85"
+        },
+
+        {
+          name: "Maison 24",
+          category: "Digital Experience",
+          description: "",
+          link: "",
+          image:
+            "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=85"
+        },
+
+        {
+          name: "Arc / Objects",
+          category: "Art Direction",
+          description: "",
+          link: "",
+          image:
+            "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=85"
+        },
+
+        {
+          name: "Forma",
+          category: "Web Design",
+          description: "",
+          link: "",
+          image:
+            "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85"
+        }
+
+      ],
+
+      experience: [
+
+        {
+          title: "Senior Creative Designer",
+          company: "North Studio",
+          period: "2022 — Present",
+          description:
+            "Leading digital design projects, brand systems, and creative direction for modern businesses."
+        }
+
+      ],
+
+      education: [
+
+        {
+          degree: "BA Graphic Design",
+          institution: "London College of Arts",
+          period: "2014 — 2018"
+        }
+
+      ],
+
+      skills: [
+
+        "Brand Design",
+        "UI / UX",
+        "Art Direction",
+        "Web Design",
+        "Creative Strategy"
+
+      ]
+
+    };
+
+
+    /* =========================================
+       LOAD CUSTOMIZER DATA
+    ========================================= */
+
+    function loadPortfolioData() {
+
+      try {
+
+        const saved =
+          localStorage.getItem("royalPortfolioData");
+
+        if (!saved) {
+
+          return defaultData;
+
+        }
+
+        const parsed = JSON.parse(saved);
+
+        return {
+
+          ...defaultData,
+
+          ...parsed,
+
+          services:
+            Array.isArray(parsed.services)
+              ? parsed.services
+              : defaultData.services,
+
+          projects:
+            Array.isArray(parsed.projects)
+              ? parsed.projects
+              : defaultData.projects,
+
+          experience:
+            Array.isArray(parsed.experience)
+              ? parsed.experience
+              : defaultData.experience,
+
+          education:
+            Array.isArray(parsed.education)
+              ? parsed.education
+              : defaultData.education,
+
+          skills:
+            Array.isArray(parsed.skills)
+              ? parsed.skills
+              : defaultData.skills
+
+        };
+
+      } catch (error) {
+
+        console.error(
+          "Royal Portfolio data could not be loaded:",
+          error
+        );
+
+        return defaultData;
+
+      }
+
+    }
+
+
+    const data = loadPortfolioData();
+
+
+    /* =========================================
+       PROFILE PHOTO
+    ========================================= */
+
+    function loadProfilePhoto() {
+
+      const savedPhoto =
+        localStorage.getItem("royalPortfolioPhoto");
+
+      const image =
+        document.getElementById("profilePhoto");
+
+      if (savedPhoto && image) {
+
+        image.src = savedPhoto;
+
+      }
+
+    }
+
+
+    /* =========================================
+       PERSONAL INFORMATION
+    ========================================= */
+
+    function renderPersonalData() {
+
+      const name =
+        data.fullName || defaultData.fullName;
+
+      const jobTitle =
+        data.jobTitle || defaultData.jobTitle;
+
+      const summary =
+        data.summary || defaultData.summary;
+
+      const about =
+        data.about || defaultData.about;
+
+      document.title =
+        `${name} | ${jobTitle}`;
+
+      document.getElementById("heroName").innerHTML =
+
+        escapeHtml(name) +
+        "<br>" +
+        "<em>" +
+        escapeHtml(jobTitle) +
+        "</em>";
+
+      document.getElementById("heroDescription")
+        .textContent = summary;
+
+      document.getElementById("aboutText")
+        .textContent = about;
+
+    }
+
+
+    /* =========================================
+       PROJECTS
+    ========================================= */
+
+    function renderProjects() {
+
+      const container =
+        document.getElementById("projectsContainer");
+
+      if (!container) return;
+
+      container.innerHTML = "";
+
+      const projects =
+        Array.isArray(data.projects)
+          ? data.projects
+          : [];
+
+      if (!projects.length) {
+
+        container.innerHTML =
+          '<p class="empty-message">Add your projects from Customize.</p>';
+
+        return;
+
+      }
+
+      projects.forEach((project, index) => {
+
+        const article =
+          document.createElement("article");
+
+        article.className = "project";
+
+        const image =
+          project.image || "";
+
+        const name =
+          project.name || "Untitled Project";
+
+        const category =
+          project.category || "Creative Project";
+
+        const description =
+          project.description || "";
+
+        const link =
+          project.link || "";
+
+        let imageHTML = "";
+
+        if (image) {
+
+          imageHTML = `
+            <img
+              src="${escapeAttr(image)}"
+              alt="${escapeAttr(name)}"
+            >
+          `;
+
+        } else {
+
+          imageHTML = `
+            <div class="project-placeholder">
+              ${escapeHtml(name)}
+            </div>
+          `;
+
+        }
+
+        let linkHTML = "";
+
+        if (link) {
+
+          linkHTML = `
+            <a
+              href="${escapeAttr(link)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View Project ↗
+            </a>
+          `;
+
+        }
+
+        article.innerHTML = `
+
+          <div class="project-image">
+            ${imageHTML}
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              ${escapeHtml(name)}
+            </h3>
+
+            <span>
+              ${String(index + 1).padStart(2, "0")} /
+              ${escapeHtml(category)}
+            </span>
+
+          </div>
+
+          ${
+            description
+              ? `<p class="project-description">
+                   ${escapeHtml(description)}
+                 </p>`
+              : ""
+          }
+
+          ${linkHTML}
+
+        `;
+
+        container.appendChild(article);
+
+      });
+
+    }
+
+
+    /* =========================================
+       SERVICES
+    ========================================= */
+
+    function renderServices() {
+
+      const container =
+        document.getElementById("servicesContainer");
+
+      if (!container) return;
+
+      container.innerHTML = "";
+
+      const services =
+        Array.isArray(data.services)
+          ? data.services
+          : [];
+
+      if (!services.length) {
+
+        container.innerHTML =
+          '<p class="empty-message">Add your services from Customize.</p>';
+
+        return;
+
+      }
+
+      services.forEach((service, index) => {
+
+        const article =
+          document.createElement("article");
+
+        article.className = "service";
+
+        article.innerHTML = `
+
+          <span class="service-number">
+            ${String(index + 1).padStart(2, "0")}
+          </span>
+
+          <h3>
+            ${escapeHtml(
+              service.title || "Service"
+            )}
+          </h3>
+
+          <p>
+            ${escapeHtml(
+              service.description || ""
+            )}
+          </p>
+
+        `;
+
+        container.appendChild(article);
+
+      });
+
+    }
+
+
+    /* =========================================
+       EXPERIENCE
+    ========================================= */
+
+    function renderExperience() {
+
+      const container =
+        document.getElementById("experienceContainer");
+
+      if (!container) return;
+
+      container.innerHTML = "";
+
+      const experience =
+        Array.isArray(data.experience)
+          ? data.experience
+          : [];
+
+      if (!experience.length) {
+
+        container.innerHTML =
+          '<p class="empty-message">Add your experience from Customize.</p>';
+
+        return;
+
+      }
+
+      experience.forEach(item => {
+
+        const article =
+          document.createElement("article");
+
+        article.className = "experience-item";
+
+        article.innerHTML = `
+
+          <div class="experience-period">
+            ${escapeHtml(item.period || "")}
+          </div>
+
+          <div>
+
+            <h3>
+              ${escapeHtml(
+                item.title || "Position"
+              )}
+            </h3>
+
+            <p class="experience-company">
+              ${escapeHtml(
+                item.company || ""
+              )}
+            </p>
+
+          </div>
+
+          <div class="experience-description">
+            ${escapeHtml(
+              item.description || ""
+            )}
+          </div>
+
+        `;
+
+        container.appendChild(article);
+
+      });
+
+    }
+
+
+    /* =========================================
+       EDUCATION
+    ========================================= */
+
+    function renderEducation() {
+
+      const container =
+        document.getElementById("educationContainer");
+
+      if (!container) return;
+
+      container.innerHTML = "";
+
+      const education =
+        Array.isArray(data.education)
+          ? data.education
+          : [];
+
+      if (!education.length) {
+
+        container.innerHTML =
+          '<p class="empty-message">Add your education from Customize.</p>';
+
+        return;
+
+      }
+
+      education.forEach(item => {
+
+        const article =
+          document.createElement("article");
+
+        article.className = "education-item";
+
+        article.innerHTML = `
+
+          <div class="education-period">
+            ${escapeHtml(item.period || "")}
+          </div>
+
+          <div>
+
+            <h3>
+              ${escapeHtml(
+                item.degree || "Degree"
+              )}
+            </h3>
+
+            <p class="education-institution">
+              ${escapeHtml(
+                item.institution || ""
+              )}
+            </p>
+
+          </div>
+
+          <div></div>
+
+        `;
+
+        container.appendChild(article);
+
+      });
+
+    }
+
+
+    /* =========================================
+       SKILLS
+    ========================================= */
+
+    function renderSkills() {
+
+      const container =
+        document.getElementById("skillsContainer");
+
+      if (!container) return;
+
+      container.innerHTML = "";
+
+      const skills =
+        Array.isArray(data.skills)
+          ? data.skills
+          : [];
+
+      if (!skills.length) {
+
+        container.innerHTML =
+          '<p class="empty-message">Add your skills from Customize.</p>';
+
+        return;
+
+      }
+
+      skills.forEach(skill => {
+
+        if (!skill) return;
+
+        const item =
+          document.createElement("span");
+
+        item.className = "skill";
+
+        item.textContent = skill;
+
+        container.appendChild(item);
+
+      });
+
+    }
+
+
+    /* =========================================
+       CONTACT
+    ========================================= */
+
+    function renderContact() {
+
+      const email =
+        data.email || defaultData.email;
+
+      const emailLink =
+        document.getElementById("emailLink");
+
+      if (emailLink) {
+
+        emailLink.href =
+          `mailto:${email}`;
+
+        emailLink.innerHTML =
+          `${escapeHtml(email)} ↗`;
+
+      }
+
+      const container =
+        document.getElementById("contactMeta");
+
+      if (!container) return;
+
+      container.innerHTML = "";
+
+      if (data.location) {
+
+        const location =
+          document.createElement("span");
+
+        location.textContent =
+          data.location;
+
+        container.appendChild(location);
+
+      }
+
+      const socialLinks = [
+
+        {
+          name: "LinkedIn",
+          value: data.linkedin
+        },
+
+        {
+          name: "Behance",
+          value: data.behance
+        },
+
+        {
+          name: "GitHub",
+          value: data.github
+        },
+
+        {
+          name: "Instagram",
+          value: data.instagram
+        },
+
+        {
+          name: "Website",
+          value: data.website
+        }
+
+      ];
+
+      socialLinks.forEach(item => {
+
+        if (
+          !item.value ||
+          item.value === "#"
+        ) {
+          return;
+        }
+
+        const link =
+          document.createElement("a");
+
+        link.href =
+          item.value;
+
+        link.target = "_blank";
+
+        link.rel = "noopener noreferrer";
+
+        link.textContent =
+          `${item.name} ↗`;
+
+        container.appendChild(link);
+
+      });
+
+    }
+
+
+    /* =========================================
+       SAFE HTML
+    ========================================= */
+
+    function escapeHtml(value) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        value == null
+          ? ""
+          : String(value);
+
+      return div.innerHTML;
+
+    }
+
+
+    function escapeAttr(value) {
+
+      return escapeHtml(value)
+        .replace(/"/g, "&quot;");
+
+    }
+
+
+    /* =========================================
+       START
+    ========================================= */
+
+    renderPersonalData();
+
+    loadProfilePhoto();
+
+    renderProjects();
+
+    renderServices();
+
+    renderExperience();
+
+    renderEducation();
+
+    renderSkills();
+
+    renderContact();
+
+  </script>
+
 </body>
-  </html>
+</html>
