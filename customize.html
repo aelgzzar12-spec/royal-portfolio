@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Royal Portfolio | Customize</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #11110f;
+      --cream: #f3eee5;
+      --paper: #faf9f6;
+      --gold: #b28b52;
+      --gray: #777066;
+      --line: #ddd7cc;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      height: 82px;
+
+      padding: 0 7%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      background: var(--paper);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-size: 18px;
+
+      font-weight: 800;
+
+      letter-spacing: 5px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .view-btn {
+      border: 1px solid var(--black);
+
+      padding: 10px 18px;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+    .container {
+      width: min(1050px, 92%);
+
+      margin: 55px auto;
+    }
+
+    .intro {
+      margin-bottom: 35px;
+    }
+
+    .intro small {
+      display: block;
+
+      font-size: 10px;
+
+      letter-spacing: 3px;
+
+      color: var(--gray);
+
+      margin-bottom: 15px;
+    }
+
+    .intro h1 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(42px, 6vw, 70px);
+
+      line-height: 1;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      color: #6c675f;
+
+      max-width: 600px;
+
+      font-size: 15px;
+    }
+
+    .panel {
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      padding: 40px;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 30px;
+
+      margin-bottom: 25px;
+
+      padding-bottom: 15px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .form-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 22px;
+    }
+
+    .field {
+      display: flex;
+
+      flex-direction: column;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 10px;
+
+      font-weight: bold;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+
+      border: 1px solid #d5cfc4;
+
+      background: white;
+
+      padding: 13px 14px;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 14px;
+
+      color: var(--black);
+
+      outline: none;
+    }
+
+    textarea {
+      min-height: 125px;
+
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .photo-box {
+      margin-top: 35px;
+
+      padding-top: 30px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .photo-preview {
+      width: 130px;
+
+      height: 160px;
+
+      background: #ddd6ca;
+
+      margin-top: 15px;
+
+      overflow: hidden;
+    }
+
+    .photo-preview img {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .photo-note {
+      margin-top: 10px;
+
+      font-size: 12px;
+
+      color: var(--gray);
+    }
+
+    .actions {
+      display: flex;
+
+      gap: 12px;
+
+      margin-top: 40px;
+
+      padding-top: 30px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    button {
+      border: 0;
+
+      cursor: pointer;
+
+      padding: 14px 25px;
+
+      font-size: 11px;
+
+      font-weight: bold;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+    .save-btn {
+      background: var(--black);
+
+      color: white;
+    }
+
+    .reset-btn {
+      background: transparent;
+
+      border: 1px solid #bbb4a9;
+
+      color: var(--black);
+    }
+
+    .status {
+      margin-top: 18px;
+
+      font-size: 13px;
+
+      color: #6d665c;
+
+      min-height: 20px;
+    }
+
+    @media (max-width: 700px) {
+
+      .topbar {
+        height: 70px;
+
+        padding: 0 5%;
+      }
+
+      .container {
+        width: 90%;
+
+        margin: 35px auto;
+      }
+
+      .panel {
+        padding: 25px 20px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <header class="topbar">
+
+    <a href="index.html" class="logo">
+      ROYAL<span>.</span>
+    </a>
+
+    <a href="index.html" class="view-btn">
+      View Portfolio ↗
+    </a>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main class="container">
+
+    <div class="intro">
+
+      <small>
+        ROYAL PORTFOLIO / CUSTOMIZER
+      </small>
+
+      <h1>
+        Customize your portfolio.
+      </h1>
+
+      <p>
+        Update your information, save your changes,
+        and your portfolio will automatically display
+        the new content.
+      </p>
+
+    </div>
+
+
+    <section class="panel">
+
+      <h2 class="section-title">
+        Personal Information
+      </h2>
+
+
+      <div class="form-grid">
+
+        <!-- NAME -->
+
+        <div class="field">
+
+          <label>
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            id="fullName"
+            placeholder="Your full name"
+          >
+
+        </div>
+
+
+        <!-- JOB -->
+
+        <div class="field">
+
+          <label>
+            Professional Title
+          </label>
+
+          <input
+            type="text"
+            id="jobTitle"
+            placeholder="Creative Director"
+          >
+
+        </div>
+
+
+        <!-- SUMMARY -->
+
+        <div class="field full">
+
+          <label>
+            Short Introduction
+          </label>
+
+          <textarea
+            id="summary"
+            placeholder="Write a short introduction about yourself..."
+          ></textarea>
+
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <div class="field full">
+
+          <label>
+            About
+          </label>
+
+          <textarea
+            id="about"
+            placeholder="Tell visitors more about yourself..."
+          ></textarea>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="field">
+
+          <label>
+            Location
+          </label>
+
+          <input
+            type="text"
+            id="location"
+            placeholder="London, United Kingdom"
+          >
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="field">
+
+          <label>
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="hello@example.com"
+          >
+
+        </div>
+
+
+        <!-- LINKEDIN -->
+
+        <div class="field">
+
+          <label>
+            LinkedIn URL
+          </label>
+
+          <input
+            type="url"
+            id="linkedin"
+            placeholder="https://linkedin.com/in/username"
+          >
+
+        </div>
+
+
+        <!-- PORTFOLIO -->
+
+        <div class="field">
+
+          <label>
+            Portfolio / Behance URL
+          </label>
+
+          <input
+            type="url"
+            id="portfolio"
+            placeholder="https://behance.net/username"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO -->
+
+      <div class="photo-box">
+
+        <h2 class="section-title">
+          Profile Photo
+        </h2>
+
+        <input
+          type="file"
+          id="photo"
+          accept="image/*"
+        >
+
+        <div class="photo-preview">
+
+          <img
+            id="photoPreview"
+            src=""
+            alt="Profile preview"
+          >
+
+        </div>
+
+        <p class="photo-note">
+          Choose a professional photo from your device.
+        </p>
+
+      </div>
+
+
+      <!-- ACTIONS -->
+
+      <div class="actions">
+
+        <button
+          class="save-btn"
+          id="saveBtn"
+        >
+          Save Changes
+        </button>
+
+        <button
+          class="reset-btn"
+          id="resetBtn"
+        >
+          Reset Demo
+        </button>
+
+      </div>
+
+
+      <div
+        class="status"
+        id="status"
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    const defaultData = {
+
+      fullName:
+        "Alex Morgan",
+
+      jobTitle:
+        "Creative Director & Digital Designer",
+
+      summary:
+        "I create thoughtful digital experiences, brands, and visual work that turn ideas into memorable results.",
+
+      about:
+        "I’m a creative professional focused on building useful, elegant, and memorable digital work. I combine strategy, design, and attention to detail to create experiences that feel as good as they look.",
+
+      location:
+        "London, United Kingdom",
+
+      email:
+        "hello@example.com",
+
+      linkedin:
+        "https://linkedin.com",
+
+      portfolio:
+        "https://behance.net"
+
+    };
+
+
+    const savedData =
+      JSON.parse(
+        localStorage.getItem("royalPortfolioData")
+      ) || defaultData;
+
+
+    const fullName =
+      document.getElementById("fullName");
+
+    const jobTitle =
+      document.getElementById("jobTitle");
+
+    const summary =
+      document.getElementById("summary");
+
+    const about =
+      document.getElementById("about");
+
+    const location =
+      document.getElementById("location");
+
+    const email =
+      document.getElementById("email");
+
+    const linkedin =
+      document.getElementById("linkedin");
+
+    const portfolio =
+      document.getElementById("portfolio");
+
+    const photo =
+      document.getElementById("photo");
+
+    const photoPreview =
+      document.getElementById("photoPreview");
+
+    const status =
+      document.getElementById("status");
+
+
+    /* LOAD SAVED DATA */
+
+    fullName.value =
+      savedData.fullName || "";
+
+    jobTitle.value =
+      savedData.jobTitle || "";
+
+    summary.value =
+      savedData.summary || "";
+
+    about.value =
+      savedData.about || "";
+
+    location.value =
+      savedData.location || "";
+
+    email.value =
+      savedData.email || "";
+
+    linkedin.value =
+      savedData.linkedin || "";
+
+    portfolio.value =
+      savedData.portfolio || "";
+
+
+    /* LOAD PHOTO */
+
+    const savedPhoto =
+      localStorage.getItem(
+        "royalPortfolioPhoto"
+      );
+
+    if (savedPhoto) {
+
+      photoPreview.src =
+        savedPhoto;
+
+    }
+
+
+    /* PHOTO PREVIEW */
+
+    photo.addEventListener(
+      "change",
+      function () {
+
+        const file =
+          this.files[0];
+
+        if (!file) return;
+
+        const reader =
+          new FileReader();
+
+        reader.onload =
+          function (event) {
+
+            photoPreview.src =
+              event.target.result;
+
+          };
+
+        reader.readAsDataURL(file);
+
+      }
+    );
+
+
+    /* SAVE */
+
+    document
+      .getElementById("saveBtn")
+      .addEventListener(
+        "click",
+        function () {
+
+          const data = {
+
+            fullName:
+              fullName.value.trim(),
+
+            jobTitle:
+              jobTitle.value.trim(),
+
+            summary:
+              summary.value.trim(),
+
+            about:
+              about.value.trim(),
+
+            location:
+              location.value.trim(),
+
+            email:
+              email.value.trim(),
+
+            linkedin:
+              linkedin.value.trim(),
+
+            portfolio:
+              portfolio.value.trim()
+
+          };
+
+
+          localStorage.setItem(
+            "royalPortfolioData",
+            JSON.stringify(data)
+          );
+
+
+          const file =
+            photo.files[0];
+
+
+          if (file) {
+
+            const reader =
+              new FileReader();
+
+            reader.onload =
+              function (event) {
+
+                localStorage.setItem(
+                  "royalPortfolioPhoto",
+                  event.target.result
+                );
+
+                showSaved();
+
+              };
+
+            reader.readAsDataURL(file);
+
+          } else {
+
+            showSaved();
+
+          }
+
+        }
+      );
+
+
+    function showSaved() {
+
+      status.textContent =
+        "Changes saved successfully. Open View Portfolio to see your updates.";
+
+      setTimeout(
+        function () {
+
+          status.textContent = "";
+
+        },
+        4000
+      );
+
+    }
+
+
+    /* RESET */
+
+    document
+      .getElementById("resetBtn")
+      .addEventListener(
+        "click",
+        function () {
+
+          const confirmed =
+            confirm(
+              "Reset the demo data?"
+            );
+
+          if (!confirmed) return;
+
+
+          localStorage.removeItem(
+            "royalPortfolioData"
+          );
+
+          localStorage.removeItem(
+            "royalPortfolioPhoto"
+          );
+
+          location.reload();
+
+        }
+      );
+
+  </script>
+
+</body>
+</html>
